@@ -266,13 +266,13 @@ body.preview .hud-wrap {
 }
 
 .cluster.intro-on .intro { animation: introFade 2.7s ease both; }
-.cluster.intro-on .intro-text span { animation: slamIn 0.45s cubic-bezier(0.1, 0.9, 0.2, 1) forwards; }
-.cluster.intro-on .intro-text span:nth-child(1) { animation-delay: 0.30s; }
-.cluster.intro-on .intro-text span:nth-child(2) { animation-delay: 0.39s; }
-.cluster.intro-on .intro-text span:nth-child(3) { animation-delay: 0.48s; }
-.cluster.intro-on .intro-text span:nth-child(4) { animation-delay: 0.57s; }
-.cluster.intro-on .intro-text span:nth-child(5) { animation-delay: 0.66s; }
-.cluster.intro-on .intro-line { animation: lineGrow 0.6s 1.0s ease-out forwards; }
+.cluster.intro-on .intro:not(.has-logo) .intro-text span { animation: slamIn 0.45s cubic-bezier(0.1, 0.9, 0.2, 1) forwards; }
+.cluster.intro-on .intro:not(.has-logo) .intro-text span:nth-child(1) { animation-delay: 0.30s; }
+.cluster.intro-on .intro:not(.has-logo) .intro-text span:nth-child(2) { animation-delay: 0.39s; }
+.cluster.intro-on .intro:not(.has-logo) .intro-text span:nth-child(3) { animation-delay: 0.48s; }
+.cluster.intro-on .intro:not(.has-logo) .intro-text span:nth-child(4) { animation-delay: 0.57s; }
+.cluster.intro-on .intro:not(.has-logo) .intro-text span:nth-child(5) { animation-delay: 0.66s; }
+.cluster.intro-on .intro:not(.has-logo) .intro-line { animation: lineGrow 0.6s 1.0s ease-out forwards; }
 .cluster.intro-on .center     { animation: centerIn 2.7s ease both; }
 
 @keyframes introFade { 0% { opacity: 0; } 8% { opacity: 1; } 80% { opacity: 1; } 100% { opacity: 0; } }
@@ -286,20 +286,20 @@ body.preview .hud-wrap {
 
 /* ----- Logo kustom (logo.png) ----- */
 .intro-logo {
-    display: none;
+    display: block;
     width: var(--logo-size);
     height: var(--logo-size);
     object-fit: contain;
     filter: none;                 /* pertahankan warna asli logo.png */
-    mix-blend-mode: screen;       /* latar putih/hitam hilang di atas HUD gelap */
+    mix-blend-mode: normal;      /* pertahankan warna asli logo */
     opacity: 0;
 }
 .intro.has-logo { opacity: 1; animation: none !important; }   /* fade diatur oleh logonya sendiri */
 .intro.has-logo .intro-logo { display: block; }
-.intro.has-logo .intro-emblem,
-.intro.has-logo .intro-text,
-.intro.has-logo .intro-line { display: none; }
-.cluster.intro-on .intro.has-logo .intro-logo { animation: logoIn 2.7s ease-out both; }
+.intro .intro-emblem,
+.intro .intro-text,
+.intro .intro-line { display: none !important; }
+.cluster.intro-on .intro .intro-logo { animation: logoIn 2.7s ease-out both; }
 @keyframes logoIn {
     0%   { opacity: 0; transform: scale(0.82); filter: blur(6px); }
     30%  { opacity: 1; transform: scale(1);    filter: blur(0); }
