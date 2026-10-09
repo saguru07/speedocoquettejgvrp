@@ -301,10 +301,10 @@ body.preview .hud-wrap {
 .intro.has-logo .intro-line { display: none; }
 .cluster.intro-on .intro.has-logo .intro-logo { animation: logoIn 2.7s ease-out both; }
 @keyframes logoIn {
-    0%   { opacity: 0; transform: scale(0.82); filter: invert(1) contrast(1.6) blur(6px); }
-    30%  { opacity: 1; transform: scale(1);    filter: invert(1) contrast(1.6) blur(0); }
-    80%  { opacity: 1; transform: scale(1);    filter: invert(1) contrast(1.6) blur(0); }
-    100% { opacity: 0; transform: scale(1.04); filter: invert(1) contrast(1.6) blur(0); }
+  0%   { opacity: 0; transform: scale(0.82); filter: contrast(1.6) blur(6px); }
+  30%  { opacity: 1; transform: scale(1);    filter: contrast(1.6) blur(0); }
+  80%  { opacity: 1; transform: scale(1);    filter: contrast(1.6) blur(0); }
+  100% { opacity: 0; transform: scale(1.04); filter: contrast(1.6) blur(0); }
 }
 
 
