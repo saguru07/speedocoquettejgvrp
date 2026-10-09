@@ -290,7 +290,7 @@ body.preview .hud-wrap {
     width: var(--logo-size);
     height: var(--logo-size);
     object-fit: contain;
-    filter: invert(1) contrast(1.6);   /* logo hitam -> putih, sisa latar jadi hitam pekat */
+    filter: contrast(1.6);   /* logo hitam -> putih, sisa latar jadi hitam pekat */
     mix-blend-mode: screen;       /* latar putih/hitam hilang di atas HUD gelap */
     opacity: 0;
 }
